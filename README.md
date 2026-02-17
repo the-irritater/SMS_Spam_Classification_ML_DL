@@ -1,12 +1,17 @@
 SMS Spam Classification using ML & Deep Learning
-Project Overview
 
-This project focuses on classifying SMS messages as Spam or Ham (Not Spam) using both traditional Machine Learning algorithms and a Deep Learning Bidirectional LSTM model.
+📌 Project Overview
 
-The objective is to build a high-performance spam detection system with strong generalization capability.
+Classifies SMS messages as Spam or Ham (Not Spam)
 
-Models Implemented
-🔹 Machine Learning Models:
+Implements both Machine Learning and Deep Learning approaches
+
+Focuses on building a high-performance spam detection system
+
+Designed to achieve strong generalization with minimal overfitting
+
+🚀 Models Implemented
+🔹 Machine Learning Models
 
 Gaussian Naive Bayes
 
@@ -16,19 +21,19 @@ Decision Tree
 
 Logistic Regression
 
-K-Nearest Neighbors
+K-Nearest Neighbors (KNN)
 
-Support Vector Classifier
+Support Vector Classifier (SVC)
 
 Gradient Boosting
 
 Bagging Classifier
 
-🔹 Deep Learning Model:
+🔹 Deep Learning Model
 
 Bidirectional LSTM (bLSTM)
 
-Final Model Performance (bLSTM)
+📊 Final Model Performance (bLSTM)
 
 Test Accuracy: 98.16%
 
@@ -42,9 +47,11 @@ Ham Precision: 99%
 
 Overall Error Rate: 1.84%
 
-The model shows minimal overfitting and excellent generalization.
+✔ Shows minimal overfitting
+✔ Demonstrates excellent generalization
+✔ Reliable for real-world spam detection
 
-Deep Learning Architecture
+🧠 Deep Learning Architecture
 
 Embedding Layer (64 dimensions)
 
@@ -58,24 +65,24 @@ Sigmoid Output Layer
 
 Total Trainable Parameters: 742,121
 
-SMS-Spam-Classification-ML-DL/
-│
-├── spam_classification.py
-├── spam.csv
-├── My_model.h5
-├── My_model.pkl
-├── requirements.txt
-└── README.md
+💾 Model Saving
 
-Model Saving
+Saved Model File: My_model.h5
 
-Saved Model: My_model.h5
-Tokenizer: My_model.pkl
+Saved Tokenizer: My_model.pkl
 
-Conclusion
-The Bidirectional LSTM model achieved high classification performance and demonstrates strong capability in real-world spam detection tasks.
+🎯 Conclusion
 
-Contributors
+Achieved high classification accuracy
+
+Balanced performance across spam and ham classes
+
+Strong real-world applicability
+
+Demonstrates effective NLP preprocessing + ML/DL comparison
+
+👨‍💻 Contributors
 
 Sanman Kadam
+
 Rutuja Shinde
