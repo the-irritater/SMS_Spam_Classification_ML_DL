@@ -1,11 +1,11 @@
 SMS Spam Classification using ML & Deep Learning
-📌 Project Overview
+Project Overview
 
 This project focuses on classifying SMS messages as Spam or Ham (Not Spam) using both traditional Machine Learning algorithms and a Deep Learning Bidirectional LSTM model.
 
 The objective is to build a high-performance spam detection system with strong generalization capability.
 
-🚀 Models Implemented
+Models Implemented
 🔹 Machine Learning Models:
 
 Gaussian Naive Bayes
@@ -28,7 +28,7 @@ Bagging Classifier
 
 Bidirectional LSTM (bLSTM)
 
-📊 Final Model Performance (bLSTM)
+Final Model Performance (bLSTM)
 
 Test Accuracy: 98.16%
 
@@ -44,7 +44,7 @@ Overall Error Rate: 1.84%
 
 The model shows minimal overfitting and excellent generalization.
 
-🧠 Deep Learning Architecture
+Deep Learning Architecture
 
 Embedding Layer (64 dimensions)
 
@@ -67,6 +67,10 @@ SMS-Spam-Classification-ML-DL/
 ├── requirements.txt
 └── README.md
 
+Model Saving
+
+Saved Model: My_model.h5
+Tokenizer: My_model.pkl
 
 Conclusion
 The Bidirectional LSTM model achieved high classification performance and demonstrates strong capability in real-world spam detection tasks.
