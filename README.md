@@ -11,6 +11,7 @@ Focuses on building a high-performance spam detection system
 Designed to achieve strong generalization with minimal overfitting
 
 🚀 Models Implemented
+
 🔹 Machine Learning Models
 
 Gaussian Naive Bayes
@@ -48,8 +49,11 @@ Ham Precision: 99%
 Overall Error Rate: 1.84%
 
 ✔ Shows minimal overfitting
+
 ✔ Demonstrates excellent generalization
+
 ✔ Reliable for real-world spam detection
+
 
 🧠 Deep Learning Architecture
 
