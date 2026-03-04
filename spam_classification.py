@@ -38,7 +38,7 @@ nltk.download("wordnet")
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-df = pd.read_csv('/content/spam.csv', encoding='latin1')
+df = pd.read_csv('/data/spam.csv', encoding='latin1')
 display(df.head())
 
 pd.set_option("display.precision", 3)
