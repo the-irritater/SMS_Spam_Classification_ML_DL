@@ -38,15 +38,15 @@ nltk.download("wordnet")
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-df = pd.read_csv('/content/spam.csv', encoding='latin1')
-display(df.head())
+df = pd.read_csv("Data/spam.csv", encoding='latin1')
+df.head()
 
 pd.set_option("display.precision", 3)
 pd.options.display.float_format = '{:.3f}'.format
 
 columns_to_drop = [col for col in df.columns if 'Unnamed' in col]
 df = df.drop(columns=columns_to_drop)
-display(df.head())
+df.head()
 
 def plot_history(history):
     loss_list = [s for s in history.history.keys() if 'loss' in s and 'val' not in s]
