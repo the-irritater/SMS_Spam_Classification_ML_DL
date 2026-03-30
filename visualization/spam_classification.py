@@ -38,15 +38,20 @@ nltk.download("wordnet")
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
+<<<<<<< HEAD:spam_classification.py
 df = pd.read_csv('/data/spam.csv', encoding='latin1')
 display(df.head())
+=======
+df = pd.read_csv('C:\\Users\\Sanman\\Downloads\\Projects\\SMS_Spam_Classification_ML_DL\\Data\\spam.csv', encoding='latin1')
+print(df.head())
+>>>>>>> e60ef773 (README.md updated doing some changes.):visualization/spam_classification.py
 
 pd.set_option("display.precision", 3)
 pd.options.display.float_format = '{:.3f}'.format
 
 columns_to_drop = [col for col in df.columns if 'Unnamed' in col]
 df = df.drop(columns=columns_to_drop)
-display(df.head())
+print(df.head())
 
 def plot_history(history):
     loss_list = [s for s in history.history.keys() if 'loss' in s and 'val' not in s]
@@ -182,7 +187,7 @@ def word_cloud(tag):
   plt.tight_layout(pad = 1)
   plt.show()
 
-df_spam = pd.read_csv('spam.csv', encoding = 'latin-1')
+df_spam = pd.read_csv('C:\\Users\\Sanman\\Downloads\\Projects\\SMS_Spam_Classification_ML_DL\\Data\\spam.csv', encoding = 'latin-1')
 
 df_spam = df_spam.filter(['v1', 'v2'], axis = 1)
 df_spam.columns = ['feature', 'message']
@@ -579,7 +584,7 @@ print(f"Test accuracy: {model_score[1] * 100:0.2f}% \t\t Test error: {model_scor
 ##Part-7 Model saving & predict checking
 """
 
-M_name = "My_model"
+M_name = "Spam_Detector_Model"
 
 pickle.dump(tokenizer, open(M_name + ".pkl", "wb"))
 filepath = M_name + '.h5'
@@ -610,7 +615,7 @@ message_example_tp = pad_sequences(tokenizer.texts_to_sequences(message_example)
                                    padding = padding_type,
                                    truncating = trunc_type)
 
-pred = float(model.predict(message_example_tp))
+pred = float(model.predict(message_example_tp)[0][0])
 if (pred > threshold):
     print ("This message is a real text")
 else:

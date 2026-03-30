@@ -6,3 +6,4 @@ nltk
 wordcloud
 scikit-learn
 tensorflow
+ipython
