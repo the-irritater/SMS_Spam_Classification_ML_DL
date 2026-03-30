@@ -38,13 +38,8 @@ nltk.download("wordnet")
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-<<<<<<< HEAD:spam_classification.py
 df = pd.read_csv('/data/spam.csv', encoding='latin1')
-display(df.head())
-=======
-df = pd.read_csv('C:\\Users\\Sanman\\Downloads\\Projects\\SMS_Spam_Classification_ML_DL\\Data\\spam.csv', encoding='latin1')
 print(df.head())
->>>>>>> e60ef773 (README.md updated doing some changes.):visualization/spam_classification.py
 
 pd.set_option("display.precision", 3)
 pd.options.display.float_format = '{:.3f}'.format
