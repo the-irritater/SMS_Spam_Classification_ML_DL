@@ -3,7 +3,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)]()
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.2.0-orange)]()
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12-FF6F00)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
 
 ## Problem Statement
