@@ -21,12 +21,11 @@ With the increasing volume of SMS communication, spam messages have become a maj
 - Compare performance between ML and DL approaches  
 - Identify the most effective method for real-world deployment  
 
-=======
+---
 
 ## Performance Validation
 
 ### Model Comparison (Test Set)
->>>>>>> e60ef773 (README.md updated doing some changes.)
 
 | Model                  | Accuracy   | Precision  | Recall     | F1-Score   |
 | ---------------------- | ---------- | ---------- | ---------- | ---------- |
@@ -34,35 +33,31 @@ With the increasing volume of SMS communication, spam messages have become a maj
 | Support Vector Machine | 97.70%     | 99.00%     | 96.50%     | 97.73%     |
 | **Bidirectional LSTM** | **98.16%** | **99.20%** | **97.00%** | **98.09%** |
 
-<<<<<<< HEAD
 ## Dataset
 - SMS Spam Collection Dataset  
 - Contains labeled SMS messages (Spam / Ham)  
 - Text-based classification problem  
-=======
+---
 - **Best Traditional ML**: **Logistic Regression & SVC** achieved an impressive **97.68% Accuracy** with near-perfect protection of legitimate messages, yielding an error rate of just 2.32%.
 - **Deep Learning (Bi-LSTM)**: Achieved **98.16% Test Accuracy**, proving highly resilient and capable of interpreting nuanced semantic meaning that traditional Bag-of-Words vectors occasionally drop.
 
 ## Reproducibility & Technologies
->>>>>>> e60ef773 (README.md updated doing some changes.)
 
 This codebase was developed using Python 3.8+ and relies on fixed random seeds (`seed = 42`) to guarantee experimental reproducibility.
 
-<<<<<<< HEAD
 ## Tools and Technologies Used
 - Python  
 - Pandas, NumPy  
 - Scikit-learn  
 - TensorFlow / Keras  
 - NLTK  
-=======
+---
 - **Python Data Stack**: `pandas`, `numpy`, `matplotlib`, `seaborn`
 - **NLP Processing**: `nltk` (WordNet Lemmatizer, Tokenization), Regex, `wordcloud`
 - **Machine Learning**: `scikit-learn` (CountVectorizer, Classifiers, Evaluation Metrics)
 - **Deep Learning**: `TensorFlow` / `Keras` (Bi-LSTM, Dense Layers, Embeddings)
 
 ## Repository Structure
->>>>>>> e60ef773 (README.md updated doing some changes.)
 
 ```text
 ├── Data/
@@ -98,7 +93,7 @@ This codebase was developed using Python 3.8+ and relies on fixed random seeds (
 - Accuracy  
 - Precision, Recall, F1-score  
 - Confusion Matrix  
-=======
+---
 ## Quick Start
 
 To run this project locally, follow these steps:
@@ -109,18 +104,15 @@ To run this project locally, follow these steps:
    git clone https://github.com/the-irritater/SMS_Spam_Classification_ML_DL.git
    cd SMS_Spam_Classification_ML_DL
    ```
->>>>>>> e60ef773 (README.md updated doing some changes.)
-
 2. **Install the dependencies:**
    It is recommended to use a Python virtual environment.
 
-<<<<<<< HEAD
 ## Key Insights
 - Machine learning models performed well with faster training time  
 - Deep learning models showed improved performance on complex patterns  
 - TF-IDF provided strong baseline results for text classification  
 - Model performance depends on feature representation and complexity  
-=======
+---
    ```bash
    pip install -r requirements.txt
    ```
@@ -134,9 +126,7 @@ To run this project locally, follow these steps:
    ```bash
    python spam_classification.py
    ```
->>>>>>> e60ef773 (README.md updated doing some changes.)
-
-## Dataset Citation
+---
 
 ## Model Comparison
 - ML models are faster and easier to deploy  
@@ -145,16 +135,23 @@ To run this project locally, follow these steps:
 =======
 The data utilized in this repository is the renowned **SMS Spam Collection Data Set** originally sourced from the UCI Machine Learning Repository.
 
-- **Source**: [UCI Machine Learning Repository: SMS Spam Collection](https://archive.ics.uci.edu/ml/datasets/sms+spam+collection)
->>>>>>> e60ef773 (README.md updated doing some changes.)
-
-## Conclusion & Business Value
+---
 
 ## Business Impact
-- Enables automatic filtering of spam messages  
-- Improves user experience by reducing unwanted messages  
-- Can be integrated into messaging platforms and telecom systems  
-- Enhances security by identifying potentially harmful messages  
+- Enables automatic filtering of spam messages with 98.16% accuracy
+- Improves user experience by reducing unwanted messages and phishing attempts
+- Can be integrated into messaging platforms and telecom systems via API
+- Enhances security by identifying potentially harmful messages before user interaction
+- Provides interpretable metrics (precision/recall) to balance safety and usability
+
+---
+
+Future Enhancements
+- Deployment: Build a Flask/FastAPI endpoint for real-time classification
+- Multilingual Support: Extend to non-English SMS datasets
+- Explainability: Integrate LIME or SHAP for model interpretability
+- Active Learning: Implement user feedback loop for continuous model improvement
+- Model Compression: Apply quantization or pruning for mobile deployment
 
 ---
 
@@ -166,112 +163,13 @@ The data utilized in this repository is the renowned **SMS Spam Collection Data 
 
 ---
 
-## Author
-Sanman Kadam  
-MSc Statistics Student | Aspiring Data Analyst  
+Author
+Sanman Kadam
+MSc Statistics | Data Analyst
+Location: Mumbai, India
 GitHub: https://github.com/the-irritater
-=======
+LinkedIn: https://www.linkedin.com/in/sanman-kadam-7a4990374/
+Email: sanman.kadam@statistics.mu.ac.in
+
+---
 This project demonstrates an end-to-end Machine Learning lifecycle. By successfully evaluating multiple modeling paradigms (Classical ML vs. Deep Neural Networks) and focusing on the precision-recall tradeoff to protect legitimate user traffic, this framework acts as a highly reliable, production-ready spam verification system.
-
-## Future Enhancements
-=======
-
----
-
-## Dataset
-- SMS Spam Collection Dataset  
-- Contains labeled SMS messages (Spam / Ham)  
-- Text-based classification problem  
-
----
-
-## Tools and Technologies Used
-- Python  
-- Pandas, NumPy  
-- Scikit-learn  
-- TensorFlow / Keras  
-- NLTK  
->>>>>>> 0a4478bc842c7510289e633c290626756c3b3bc7
-
-- **Deployment**: Build a Flask/FastAPI API endpoint for real-time classification.
-- **Multilingual Support**: Extend dataset to include non-English SMS messages.
-- **Explainability**: Integrate LIME or SHAP for model interpretability.
-- **Active Learning**: Implement feedback loop to retrain model on user-reported spam.
-
-<<<<<<< HEAD
-## Author
-
-**Sanman Kadam**  
-_MSc Statistics | Data Analyst_
-
-- **Location**: Mumbai, India
-- **GitHub**: [the-irritater](https://github.com/the-irritater)
-- **LinkedIn**: [Sanman Kadam](https://www.linkedin.com/in/sanman-kadam-7a4990374/)
-- **Email**: your.email@example.com
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
->>>>>>> e60ef773 (README.md updated doing some changes.)
-=======
-## Approach
-
-### 1. Data Preprocessing
-- Text cleaning (removal of punctuation, stopwords)  
-- Tokenization and normalization  
-
-### 2. Feature Engineering
-- TF-IDF / Count Vectorization  
-
-### 3. Machine Learning Models
-- Naive Bayes  
-- Logistic Regression  
-- Support Vector Machine  
-
-### 4. Deep Learning Models
-- Artificial Neural Network (ANN)  
-- (Optional: LSTM if used)
-
-### 5. Model Evaluation
-- Accuracy  
-- Precision, Recall, F1-score  
-- Confusion Matrix  
-
----
-
-## Key Insights
-- Machine learning models performed well with faster training time  
-- Deep learning models showed improved performance on complex patterns  
-- TF-IDF provided strong baseline results for text classification  
-- Model performance depends on feature representation and complexity  
-
----
-
-## Model Comparison
-- ML models are faster and easier to deploy  
-- DL models capture deeper patterns but require more computation  
-- Simpler models (Naive Bayes, Logistic Regression) are effective for baseline solutions  
-
----
-
-## Business Impact
-- Enables automatic filtering of spam messages  
-- Improves user experience by reducing unwanted messages  
-- Can be integrated into messaging platforms and telecom systems  
-- Enhances security by identifying potentially harmful messages  
-
----
-
-## How to Run
-1. Install required libraries  
-2. Load dataset  
-3. Run preprocessing and model training  
-4. Evaluate model performance  
-
----
-
-## Author
-Sanman Kadam  
-MSc Statistics Student | Aspiring Data Analyst  
-GitHub: https://github.com/the-irritater
->>>>>>> 0a4478bc842c7510289e633c290626756c3b3bc7
