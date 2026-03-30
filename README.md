@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # SMS Spam Classification using Machine Learning and Deep Learning
 
 ## Problem Statement
@@ -34,15 +32,15 @@ With the increasing volume of SMS communication, spam messages have become a maj
 - **Traditional ML Baselines**: Train and exhaustively compare algorithms including Logistic Regression, Support Vector Machine (SVM), Naive Bayes variants, Decision Trees, Gradient Boosting, and Bagging classifiers.
 - **Deep Learning Architecture**: Design a Bi-LSTM model with Word Embeddings and Dropout regularization layers to achieve superior contextual understanding of messaging patterns.
 
-<<<<<<< HEAD
 ## Objectives
 - Perform text preprocessing and feature extraction  
 - Build machine learning models for spam classification  
 - Develop deep learning models for improved accuracy  
 - Compare performance between ML and DL approaches  
 - Identify the most effective method for real-world deployment  
-<<<<<<< HEAD
+
 =======
+
 ## Performance Validation
 
 ### Model Comparison (Test Set)
@@ -96,7 +94,6 @@ This codebase was developed using Python 3.8+ and relies on fixed random seeds (
 └── README.md                                # Project documentation
 ```
 
-<<<<<<< HEAD
 ## Approach
 
 ### 1. Data Preprocessing
@@ -159,7 +156,6 @@ To run this project locally, follow these steps:
 
 ## Dataset Citation
 
-<<<<<<< HEAD
 ## Model Comparison
 - ML models are faster and easier to deploy  
 - DL models capture deeper patterns but require more computation  
@@ -172,7 +168,6 @@ The data utilized in this repository is the renowned **SMS Spam Collection Data 
 
 ## Conclusion & Business Value
 
-<<<<<<< HEAD
 ## Business Impact
 - Enables automatic filtering of spam messages  
 - Improves user experience by reducing unwanted messages  
