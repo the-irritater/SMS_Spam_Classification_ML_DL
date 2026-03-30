@@ -1,31 +1,13 @@
 # SMS Spam Classification using Machine Learning and Deep Learning
 
-## Problem Statement
-With the increasing volume of SMS communication, spam messages have become a major concern affecting user experience and security. This project aims to build an intelligent system that can automatically classify SMS messages as spam or legitimate using both machine learning and deep learning techniques.
-=======
-# SMS Spam Classification Pipeline: NLP & Deep Learning
-
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)]()
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.2.0-orange)]()
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12-FF6F00)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
-## Problem Statement
-
-Spam messages pose significant cybersecurity risks and degrade user experience through phishing attempts, scams, and unwanted solicitations. The objective of this project is to construct a reliable, automated Natural Language Processing (NLP) system capable of accurately intercepting spam SMS messages while strictly avoiding the misclassification of legitimate user communications (False Positives).
-
-## Project Overview
-
-To solve this text classification challenge, this project takes a comprehensive engineering approach. It establishes strong baselines using **8 different Traditional Machine Learning models** (analyzing TF-IDF features) and subsequently implements an advanced **Bidirectional LSTM Neural Network** using TensorFlow/Keras to capture complex sequential text dependencies.
-
-## Key Technical Objectives
->>>>>>> e60ef773 (README.md updated doing some changes.)
-=======
-# SMS Spam Classification using Machine Learning and Deep Learning
 
 ## Problem Statement
 With the increasing volume of SMS communication, spam messages have become a major concern affecting user experience and security. This project aims to build an intelligent system that can automatically classify SMS messages as spam or legitimate using both machine learning and deep learning techniques.
->>>>>>> 0a4478bc842c7510289e633c290626756c3b3bc7
 
 - **Data Preprocessing & EDA**: Clean textual data (Regex, Lemmatization, Stopword removal) and visually explore textual patterns utilizing custom Word Clouds and frequency distributions.
 - **Addressing Class Imbalance**: Recognize that 'Ham' dominates the dataset (86.59%) and prioritize metrics like precision and recall over bare accuracy to strictly minimize False Positives.
