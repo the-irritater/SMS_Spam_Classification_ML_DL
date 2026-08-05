@@ -14,7 +14,7 @@ This repository evaluates multiple machine learning baseline algorithms against 
 ## Model Evaluation & Comparison
 
 | Model | Accuracy | Precision (Spam) | Recall (Spam) | F1 Score | Inference Time |
-|---|---|---|---|---|---|
+|-|-|-|-|-|-|
 | Naive Bayes (TF-IDF) | 97.8% | 0.98 | 0.93 | 0.95 | <1ms |
 | Logistic Regression | 98.1% | 0.97 | 0.95 | 0.96 | <1ms |
 | Support Vector Machine | 98.3% | 0.98 | 0.95 | 0.96 | <1ms |
@@ -66,7 +66,7 @@ python spam_classification.py
 
 ### FastAPI Service Execution
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 8000
+uvicorn app:app -host 0.0.0.0 -port 8000
 ```
 
 ### Docker Execution

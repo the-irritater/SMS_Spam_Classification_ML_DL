@@ -116,7 +116,7 @@ def plot_conf_matr(conf_matr, classes,
                           cmap = plt.cm.winter):
   """
   Citation
-  ---------
+  -
   http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
 
   """
@@ -397,7 +397,7 @@ plot_conf_matr(conf_m_BC, classes = ['Spam','Ham'], normalize = False, title = '
 """The model achieves 96.21% accuracy with high precision (0.97) and recall (0.98) for Ham, meaning legitimate messages are consistently classified correctly. Spam detection is slightly weaker (recall 0.85), leading to a 3.79% error rate. Overall, the model shows strong and stable performance.
 
 | Stage   | Classifier                | Accuracy | Error Rate | Key Interpretation                                                                                   |
-| ------- | ------------------------- | -------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| - | - | - | - | - |
 | IV & VI | Logistic Regression / SVC | 97.68%   | 2.32%      | Best in Class: Provides the highest overall accuracy and near-perfect protection of legitimate mail. |
 | VII     | Gradient Boosting         | 97.45%   | 2.55%      | High Precision: Excellent at ensuring flagged spam is truly junk, though slightly lower spam recall. |
 | IIb     | Multinomial Naive Bayes   | 97.29%   | 2.71%      | Balanced: Best middle-ground model with high consistency across both spam and ham classes.           |

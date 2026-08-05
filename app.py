@@ -5,7 +5,7 @@ Accepts JSON requests with SMS text messages and returns
 spam prediction, confidence probability, and inference latency.
 
 Usage:
-    uvicorn app:app --reload --port 8000
+    uvicorn app:app -reload -port 8000
 """
 
 import time
