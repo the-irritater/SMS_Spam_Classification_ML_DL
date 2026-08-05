@@ -1,119 +1,81 @@
-# SMS Spam Classification — ML & Deep Learning
-> Detecting spam SMS messages with 98%+ accuracy using NLP, classical ML, and LSTM deep learning.
+# SMS Spam Classification: Machine Learning and Deep Learning
 
-[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)]()
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?logo=tensorflow&logoColor=white)]()
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)]()
+Detecting SMS spam messages with high precision and recall using Natural Language Processing, classical machine learning algorithms, and Long Short-Term Memory (LSTM) neural networks.
 
 ## Problem Statement
 
-SMS spam costs mobile users billions annually in lost time and security risks. Effective spam filters must be:
-- **Highly accurate** — missing spam (false negatives) degrades user trust
-- **Low false positive** — flagging real messages as spam is worse than letting some spam through
-- **Fast** — filtering must happen in real-time (<10ms per message)
+Unsolicited SMS spam causes financial loss and security risks. An effective filtering system must meet three criteria:
+1. High overall classification accuracy.
+2. Low false positive rate to prevent legitimate messages from being misclassified.
+3. Fast execution latency for real-time message filtering.
 
-This project builds and compares multiple spam classifiers, from classical Naive Bayes to LSTM neural networks.
+This repository evaluates multiple machine learning baseline algorithms against an LSTM deep learning model.
 
-## Key Results
-
-### Model Comparison
+## Model Evaluation & Comparison
 
 | Model | Accuracy | Precision (Spam) | Recall (Spam) | F1 Score | Inference Time |
 |---|---|---|---|---|---|
 | Naive Bayes (TF-IDF) | 97.8% | 0.98 | 0.93 | 0.95 | <1ms |
 | Logistic Regression | 98.1% | 0.97 | 0.95 | 0.96 | <1ms |
-| SVM (Linear) | 98.3% | 0.98 | 0.95 | 0.96 | <1ms |
-| **LSTM (Deep Learning)** | **98.5%** | **0.99** | **0.96** | **0.97** | ~5ms |
+| Support Vector Machine | 98.3% | 0.98 | 0.95 | 0.96 | <1ms |
+| LSTM Neural Network | 98.5% | 0.99 | 0.96 | 0.97 | ~5ms |
 
-### Confusion Matrix (LSTM)
+## Confusion Matrix (LSTM Model)
 
 ```
               Predicted
               Ham    Spam
-Actual Ham    960      5     ← 0.5% false positive rate
-Actual Spam     6    139     ← 95.9% spam caught
+Actual Ham    960      5     (0.5% False Positive Rate)
+Actual Spam     6    139     (95.9% Spam Recall)
 ```
 
-> **Key Insight**: All models perform well, but LSTM provides the best balance of precision and recall. For production deployment, Logistic Regression offers the best speed/accuracy tradeoff.
+Logistic Regression provides an optimal balance between execution speed and classification accuracy for production deployment.
 
 ## Methodology
 
-### 1. Text Preprocessing
-- Lowercasing, punctuation removal, stopword filtering
-- Tokenization and sequence padding (for LSTM)
-- TF-IDF vectorization (for classical ML)
-
-### 2. Class Imbalance
-- Dataset is ~87% Ham, ~13% Spam
-- Handled via stratified train/test split
-- Evaluated using precision/recall (not just accuracy)
-
-### 3. Classical ML Models
-- **Naive Bayes**: Strong baseline for text classification
-- **Logistic Regression**: Interpretable, fast, competitive accuracy
-- **SVM (Linear Kernel)**: Best classical performance
-
-### 4. Deep Learning (LSTM)
-- Embedding layer → LSTM → Dense → Sigmoid
-- Trained with binary cross-entropy loss
-- Early stopping to prevent overfitting
+1. **Text Preprocessing**: Lowercasing, punctuation removal, stopword filtering, tokenization, and sequence padding.
+2. **Class Imbalance Handling**: Evaluated using precision, recall, and F1 metrics rather than raw accuracy alone.
+3. **Classical ML Baselines**: Evaluated Naive Bayes, Logistic Regression, and Support Vector Machines.
+4. **Deep Learning Architecture**: Constructed a Keras Sequential model featuring Embedding, Bidirectional LSTM, and Dense layers with Sigmoid activation.
 
 ## Project Structure
 
 ```
 SMS_Spam_Classification_ML_DL/
 ├── Data/
-│   └── spam.csv                 # SMS dataset (5,572 messages)
+│   └── spam.csv
 ├── Output/
-│   ├── confusion_matrix.png     # Model evaluation plots
+│   ├── confusion_matrix.png
 │   └── roc_curve.png
-├── spam_classification.py       # Full analysis pipeline
-├── My_model.h5                  # Saved LSTM model (Keras)
-├── My_model.pkl                 # Saved ML model (sklearn)
+├── app.py
+├── Dockerfile
+├── spam_classification.py
+├── My_model.h5
+├── My_model.pkl
 ├── requirements.txt
 └── README.md
 ```
 
 ## How to Run
 
+### Local Pipeline Execution
 ```bash
-# Clone and install
-git clone https://github.com/the-irritater/SMS_Spam_Classification_ML_DL.git
-cd SMS_Spam_Classification_ML_DL
 pip install -r requirements.txt
-
-# Run the full pipeline
 python spam_classification.py
-
-# Quick prediction with saved model
-python -c "
-import pickle
-model = pickle.load(open('My_model.pkl', 'rb'))
-# Use your TF-IDF vectorizer + model to predict
-"
 ```
 
-## Tech Stack
+### FastAPI Service Execution
+```bash
+uvicorn app:app --host 0.0.0.0 --port 8000
+```
 
-- **Python 3.11** — Core language
-- **Pandas / NumPy** — Data processing
-- **NLTK** — Text preprocessing, tokenization
-- **Scikit-learn** — TF-IDF, Naive Bayes, Logistic Regression, SVM
-- **TensorFlow / Keras** — LSTM deep learning model
-- **Matplotlib / Seaborn** — Visualization
-
-## Future Improvements
-
-- [ ] Build **FastAPI endpoint** (`/predict`) for real-time classification
-- [ ] Add **LIME/SHAP** explainability: highlight spam-triggering words
-- [ ] Report **inference latency** benchmarks per model
-- [ ] **Dockerize** and deploy to Render/Railway
-- [ ] Add **DistilBERT** comparison using HuggingFace Transformers
+### Docker Execution
+```bash
+docker build -t sms-spam-api .
+docker run -p 8000:8000 sms-spam-api
+```
 
 ## Author
 
 Sanman Kadam  
 MSc Statistics | Data Analyst
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sanman%20Kadam-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/sanman-kadam-7a4990374/)
-[![GitHub](https://img.shields.io/badge/GitHub-the--irritater-black?style=flat&logo=github)](https://github.com/the-irritater)
